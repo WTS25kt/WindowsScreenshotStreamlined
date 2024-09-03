@@ -1,0 +1,2 @@
+# WindowsScreenshotStreamlined
+手順書用スクショを自動でExcelに挿入する
