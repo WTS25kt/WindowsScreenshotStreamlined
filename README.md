@@ -1,6 +1,7 @@
 # WindowsScreenshotStreamlined
 手順書用スクショを自動でExcelに挿入する
 
+9/4:iPhoneで簡単開発
 プレビュー
 
 概要
