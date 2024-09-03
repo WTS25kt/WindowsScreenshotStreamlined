@@ -1,0 +1,22 @@
+
+Sub InsertScreenshots()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets(1)
+    Dim folderPath As String
+    folderPath = "C:\Users\あなたのユーザー名\Documents\Screenshots_Backup\"
+    Dim fileName As String
+    Dim row As Integer
+    row = 1
+    fileName = Dir(folderPath & "*.png")
+    While fileName <> ""
+        ws.Pictures.Insert(folderPath & fileName).Select
+        With Selection
+            .Top = ws.Cells(row, 1).Top
+            .Left = ws.Cells(row, 1).Left
+        End With
+        ' ファイルを削除
+        Kill folderPath & fileName
+        row = row + 20
+        fileName = Dir
+    Wend
+End Sub
